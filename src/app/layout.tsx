@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Navbar from "./components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body className={cn("relative h-full font-sans antialiased", inter.className)}>
         <main className='flex flex-col relative min-h-screen'>
+          <Navbar />
           <div className='flex-grow flex-1'>{children}</div>
         </main>
       </body>
